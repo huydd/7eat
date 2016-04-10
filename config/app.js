@@ -20,7 +20,7 @@ var app = {
 	EXC_SERVER: 3,
 	EXC_INVALID: 4,
 	EXC_UNKNOW: 5,
-	EXC_CONFLICT: 6
+	EXC_CONFLICT: 6,
 
 	// Super secret
 	SUPER_SECRET: 'tutorplus2016'

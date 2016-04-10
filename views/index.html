@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.12.3.js"></script>
+  <script type="text/javascript">
+    var socket = io('localhost:3000');
+    $(document).ready(function () {
+      $("#btn-login").click(function () {
+        socket.emit("user-login", $("#email").val())
+      });
+      socket.on('user-login', function (data) {
+        console.log(data)
+      })
+    });
+  </script>
+</head>
+<body>
+  <h1>Tpus</h1>
+  <input type="text" id="email">
+  <button id="btn-login">Login</button>
+</body>
+</html>

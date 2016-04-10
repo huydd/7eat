@@ -9,7 +9,7 @@ const auth = require('../controller/middlewares/index');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
+    res.render('index.html');
 });
 
 router.post('/signup', user.register.signup);
